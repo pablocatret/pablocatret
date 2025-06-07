@@ -6,18 +6,18 @@ import { FaUniversity } from 'react-icons/fa';
 import { MdSchool } from 'react-icons/md';
 
 // IMPORTACIÓN DE LOGOS DESDE ASSETS
-import stanford from '../assets/logos/stanford.png';
-import yale from '../assets/logos/yale.png';
-import johnhopkins from '../assets/logos/johnhopkins.png';
-import ibm from '../assets/logos/ibm.png';
-import deeplearning_ai from '../assets/logos/deeplearning_ai.png';
-import neo4j from '../assets/logos/neo4j.png';
-import aws from '../assets/logos/aws.png';
-import googlecloud from '../assets/logos/googlecloud.png';
-import nyif from '../assets/logos/nyif.png';
-import polimi from '../assets/logos/polimi.png';
-import ub from '../assets/logos/ub.png';
-import uv from '../assets/logos/uv.png';
+import stanford from '@/assets/logos/stanford.png';
+import yale from '@/assets/logos/yale.png';
+import johnhopkins from '@/assets/logos/johnhopkins.png';
+import ibm from '@/assets/logos/ibm.png';
+import deeplearning_ai from '@/assets/logos/deeplearning_ai.png';
+import neo4j from '@/assets/logos/neo4j.png';
+import aws from '@/assets/logos/aws.png';
+import googlecloud from '@/assets/logos/googlecloud.png';
+import nyif from '@/assets/logos/nyif.png';
+import polimi from '@/assets/logos/polimi.png';
+import ub from '@/assets/logos/ub.png';
+import uv from '@/assets/logos/uv.png';
 
 function Educacion() {
   useEffect(() => {
