@@ -5,6 +5,20 @@ import 'aos/dist/aos.css';
 import { FaUniversity } from 'react-icons/fa';
 import { MdSchool } from 'react-icons/md';
 
+// IMPORTACIÓN DE LOGOS DESDE ASSETS
+import stanford from '../assets/logos/stanford.png';
+import yale from '../assets/logos/yale.png';
+import johnhopkins from '../assets/logos/johnhopkins.png';
+import ibm from '../assets/logos/ibm.png';
+import deeplearning_ai from '../assets/logos/deeplearning_ai.png';
+import neo4j from '../assets/logos/neo4j.png';
+import aws from '../assets/logos/aws.png';
+import googlecloud from '../assets/logos/googlecloud.png';
+import nyif from '../assets/logos/nyif.png';
+import polimi from '../assets/logos/polimi.png';
+import ub from '../assets/logos/ub.png';
+import uv from '../assets/logos/uv.png';
+
 function Educacion() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -34,10 +48,8 @@ function Educacion() {
   ];
 
   const logos = [
-    '/logos/stanford.png', '/logos/yale.png', '/logos/johnhopkins.png',
-    '/logos/ibm.png', '/logos/deeplearning_ai.png', '/logos/neo4j.png',
-    '/logos/aws.png', '/logos/googlecloud.png',
-    '/logos/nyif.png', '/logos/polimi.png', '/logos/ub.png', '/logos/uv.png',
+    stanford, yale, johnhopkins, ibm, deeplearning_ai, neo4j,
+    aws, googlecloud, nyif, polimi, ub, uv
   ];
 
   return (

@@ -1,13 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+// Importación explícita de los logos
+import yale from '../assets/logos/yale.png';
+import stanford from '../assets/logos/stanford.png';
+import nyif from '../assets/logos/nyif.png';
+import polimi from '../assets/logos/polimi.png';
+import johnhopkins from '../assets/logos/johnhopkins.png';
+import ibm from '../assets/logos/ibm.png';
+import ub from '../assets/logos/ub.png';
+import activeloop from '../assets/logos/activeloop.png';
+import deeplearning_ai from '../assets/logos/deeplearning_ai.png';
+import neo4j from '../assets/logos/neo4j.png';
+import linkedin from '../assets/logos/linkedin.png';
+import uv from '../assets/logos/uv.png';
+import ztm from '../assets/logos/ztm.png';
+import frogames from '../assets/logos/frogames.png';
+
 const cursos = [
   {
     titulo: "Financial Markets (with honors)",
     institucion: "Yale University",
     fecha: "2024",
     link: "https://www.coursera.org/account/accomplishments/certificate/JGTK6C2JJP2C",
-    logo: "/logos/yale.png",
+    logo: yale,
     temas: ["Finanzas"]
   },
   {
@@ -15,7 +31,7 @@ const cursos = [
     institucion: "Stanford University",
     fecha: "2024",
     link: "https://www.coursera.org/account/accomplishments/specialization/certificate/2DDYWG9V7HRF",
-    logo: "/logos/stanford.png",
+    logo: stanford,
     temas: ["Machine Learning"]
   },
   {
@@ -23,7 +39,7 @@ const cursos = [
     institucion: "New York Institute of Finance",
     fecha: "2024",
     link: "https://www.coursera.org/account/accomplishments/specialization/certificate/W6VBGFUVWAKC",
-    logo: "/logos/nyif.png",
+    logo: nyif,
     temas: ["Machine Learning", "Finanzas"]
   },
   {
@@ -31,7 +47,7 @@ const cursos = [
     institucion: "Politecnico di Milano",
     fecha: "2024",
     link: "https://www.coursera.org/account/accomplishments/specialization/QUFFSMHHC2RX",
-    logo: "/logos/polimi.png",
+    logo: polimi,
     temas: ["Gestión de Proyectos"]
   },
   {
@@ -39,7 +55,7 @@ const cursos = [
     institucion: "John Hopkins University",
     fecha: "2024",
     link: "https://www.coursera.org/account/accomplishments/specialization/certificate/4FLJBVCH2LFB",
-    logo: "/logos/johnhopkins.png",
+    logo: johnhopkins,
     temas: ["Estadística"]
   },
   {
@@ -47,7 +63,7 @@ const cursos = [
     institucion: "IBM",
     fecha: "2024",
     link: "https://coursera.org/verify/HE3R24T7FGTV",
-    logo: "/logos/ibm.png",
+    logo: ibm,
     temas: ["Big Data", "Machine Learning"]
   },
   {
@@ -55,7 +71,7 @@ const cursos = [
     institucion: "IBM",
     fecha: "2024",
     link: "https://coursera.org/account/accomplishments/certificate/E8WNDVZAGX6V",
-    logo: "/logos/ibm.png",
+    logo: ibm,
     temas: ["Machine Learning"]
   },
   {
@@ -63,7 +79,7 @@ const cursos = [
     institucion: "University at Buffalo",
     fecha: "2024",
     link: "https://coursera.org/verify/SYMFZ97FBSCL",
-    logo: "/logos/ub.png",
+    logo: ub,
     temas: ["Computer Vision"]
   },
   {
@@ -71,7 +87,7 @@ const cursos = [
     institucion: "Activeloop",
     fecha: "2024",
     link: "https://learn.activeloop.ai/certificates/yckrkehfpr",
-    logo: "/logos/activeloop.png",
+    logo: activeloop,
     temas: ["LLM", "IA Generativa"]
   },
   {
@@ -79,7 +95,7 @@ const cursos = [
     institucion: "DeepLearning.AI",
     fecha: "2024",
     link: "https://coursera.org/verify/ZJYWLP4ES6L9",
-    logo: "/logos/deeplearning_ai.png",
+    logo: deeplearning_ai,
     temas: ["Deep Learning", "Series Temporales"]
   },
   {
@@ -87,7 +103,7 @@ const cursos = [
     institucion: "Neo4j",
     fecha: "2024",
     link: "https://graphacademy.neo4j.com/c/cd178947-9793-451a-80f9-660af2c5a5de/",
-    logo: "/logos/neo4j.png",
+    logo: neo4j,
     temas: ["Graph ML"]
   },
   {
@@ -95,7 +111,7 @@ const cursos = [
     institucion: "DeepLearning.AI",
     fecha: "2024",
     link: "https://coursera.org/account/accomplishments/certificate/CCYTES46MDQ2",
-    logo: "/logos/deeplearning_ai.png",
+    logo: deeplearning_ai,
     temas: ["IA Generativa"]
   },
   {
@@ -103,7 +119,7 @@ const cursos = [
     institucion: "DeepLearning.AI",
     fecha: "2024",
     link: "https://coursera.org/account/accomplishments/certificate/N47HUNBEE58V",
-    logo: "/logos/deeplearning_ai.png",
+    logo: deeplearning_ai,
     temas: ["IA Generativa", "LLM"]
   },
   {
@@ -111,15 +127,15 @@ const cursos = [
     institucion: "Neo4j",
     fecha: "2024",
     link: "https://graphacademy.neo4j.com/c/029de18e-20ad-45cb-9810-db0bd8789d79/",
-    logo: "/logos/neo4j.png",
+    logo: neo4j,
     temas: ["Graph ML"]
   },
   {
     titulo: "Advance Your Skills in Natural Language Processing",
     institucion: "LinkedIn",
     fecha: "2023",
-    link: "https://www.linkedin.com/learning/certificates/3c558bd8afe851d4f6622705086bd43af4cb174fccf204221d86f3c3f10e3ce4?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3Bni99FWDYThm%2FXS6g2gHy9A%3D%3D",
-    logo: "/logos/linkedin.png",
+    link: "https://www.linkedin.com/learning/certificates/3c558bd8afe851d4f6622705086bd43af4cb174fccf204221d86f3c3f10e3ce4",
+    logo: linkedin,
     temas: ["NLP"]
   },
   {
@@ -127,7 +143,7 @@ const cursos = [
     institucion: "Universitat de València",
     fecha: "2023",
     link: "https://www.uv.es",
-    logo: "/logos/uv.png",
+    logo: uv,
     temas: ["Big Data", "Comunicación"]
   },
   {
@@ -135,15 +151,15 @@ const cursos = [
     institucion: "Zero To Mastery Academy",
     fecha: "2023",
     link: "https://www.udemy.com/certificate/UC-6e4dff45-2c14-4d45-8828-369b495089cd/",
-    logo: "/logos/ztm.png",
+    logo: ztm,
     temas: ["Deep Learning"]
   },
-    {
+  {
     titulo: "Curso completo de Machine Learning: Data Science en Python",
     institucion: "Frogames",
     fecha: "2022",
     link: "https://certificates.frogamesformacion.com/fc63c4e0-cd1a-4398-b138-43848a5c95c8",
-    logo: "/logos/frogames.png",
+    logo: frogames,
     temas: ["Data Science", "Machine Learning"]
   }
 ];
@@ -157,7 +173,6 @@ function Cursos() {
     ? cursos
     : cursos.filter(c => c.temas.includes(filtro));
 
-  // Marcamos como animado después del primer render
   useEffect(() => {
     const timer = setTimeout(() => setAnimado(true), 1000);
     return () => clearTimeout(timer);
