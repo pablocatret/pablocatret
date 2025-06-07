@@ -2,20 +2,20 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // Importación explícita de los logos
-import yale from '../assets/logos/yale.png';
-import stanford from '../assets/logos/stanford.png';
-import nyif from '../assets/logos/nyif.png';
-import polimi from '../assets/logos/polimi.png';
+import yale from '../../../assets/logos/yale.png';
+import stanford from '../../../assets/logos/stanford.png';
+import nyif from '../../../assets/logos/nyif.png';
+import polimi from '../../../assets/logos/polimi.png';
 import johnhopkins from '../assets/logos/johnhopkins.png';
-import ibm from '../assets/logos/ibm.png';
-import ub from '../assets/logos/ub.png';
-import activeloop from '../assets/logos/activeloop.png';
+import ibm from '../../../assets/logos/ibm.png';
+import ub from '../../../assets/logos/ub.png';
+import activeloop from '../../../assets/logos/activeloop.png';
 import deeplearning_ai from '../assets/logos/deeplearning_ai.png';
-import neo4j from '../assets/logos/neo4j.png';
+import neo4j from '../../../assets/logos/neo4j.png';
 import linkedin from '../assets/logos/linkedin.png';
-import uv from '../assets/logos/uv.png';
-import ztm from '../assets/logos/ztm.png';
-import frogames from '../assets/logos/frogames.png';
+import uv from '../../../assets/logos/uv.png';
+import ztm from '../../../assets/logos/ztm.png';
+import frogames from '../../../assets/logos/frogames.png';
 
 const cursos = [
   {
