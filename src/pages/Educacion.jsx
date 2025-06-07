@@ -30,12 +30,14 @@ function FadeInImage({ src, alt, onLoad }) {
         setLoaded(true);
         onLoad(); // Notifica que se ha cargado
       }}
-      className={`h-12 w-auto grayscale hover:grayscale-0 transition duration-500 ease-in-out ${
+      className={`h-12 w-auto grayscale hover:grayscale-0 transition-opacity duration-700 ease-in-out ${
         loaded ? 'opacity-100' : 'opacity-0'
       }`}
+      style={{ transitionDelay: loaded ? '200ms' : '0ms' }}
     />
   );
 }
+
 
 
 function Educacion() {
@@ -106,20 +108,19 @@ function Educacion() {
 
       <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Cursos y Certificaciones</h2>
 
-      {loadedCount >= totalLogos && (
       <div className="overflow-x-hidden py-4 px-2 bg-gray-50 rounded-lg shadow-inner mb-6">
-        <div className="flex gap-6 animate-scroll-x w-max">
-          {[...logos, ...logos].map((logo, i) => (
-            <FadeInImage
-              key={i}
-              src={logo}
-              alt={`Logo ${i}`}
-              onLoad={() => setLoadedCount(prev => prev + 1)}
-            />
-          ))}
-        </div>
+      <div className="flex gap-6 animate-scroll-x w-max">
+        {[...logos, ...logos].map((logo, i) => (
+          <FadeInImage
+            key={i}
+            src={logo}
+            alt={`Logo ${i}`}
+            onLoad={() => setLoadedCount(prev => prev + 1)}
+          />
+        ))}
       </div>
-    )}
+    </div>
+
 
 
       <div className="text-center">
