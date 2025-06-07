@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import perfil from '../assets/pablosobremi.jpeg';
+import cvPDF from '../assets/CV_PabloCatretRuber_.pdf';
 
 function SobreMi() {
   return (
@@ -40,7 +41,7 @@ function SobreMi() {
         </p>
 
         <a
-          href="/CV_PabloCatretRuber_.pdf"
+          href={cvPDF}
           download
           className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition duration-300 no-underline"
         >

@@ -19,6 +19,21 @@ import polimi from '@/assets/logos/polimi.png';
 import ub from '@/assets/logos/ub.png';
 import uv from '@/assets/logos/uv.png';
 
+function FadeInImage({ src, alt }) {
+  const [loaded, setLoaded] = React.useState(false);
+
+  return (
+    <img
+      src={src}
+      alt={alt}
+      onLoad={() => setLoaded(true)}
+      className={`h-12 w-auto grayscale hover:grayscale-0 transition duration-500 ease-in-out ${
+        loaded ? 'opacity-100' : 'opacity-0'
+      }`}
+    />
+  );
+}
+
 function Educacion() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -87,13 +102,9 @@ function Educacion() {
       <div className="overflow-x-hidden py-4 px-2 bg-gray-50 rounded-lg shadow-inner mb-6">
         <div className="flex gap-6 animate-scroll-x w-max">
           {[...logos, ...logos].map((logo, i) => (
-            <img
-              key={i}
-              src={logo}
-              alt={`Logo ${i}`}
-              className="h-12 w-auto grayscale hover:grayscale-0 transition duration-300"
-            />
+            <FadeInImage key={i} src={logo} alt={`Logo ${i}`} />
           ))}
+
         </div>
       </div>
 
