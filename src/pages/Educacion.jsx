@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -19,20 +19,24 @@ import polimi from '@/assets/logos/polimi.png';
 import ub from '@/assets/logos/ub.png';
 import uv from '@/assets/logos/uv.png';
 
-function FadeInImage({ src, alt }) {
+function FadeInImage({ src, alt, onLoad }) {
   const [loaded, setLoaded] = React.useState(false);
 
   return (
     <img
       src={src}
       alt={alt}
-      onLoad={() => setLoaded(true)}
+      onLoad={() => {
+        setLoaded(true);
+        onLoad(); // Notifica que se ha cargado
+      }}
       className={`h-12 w-auto grayscale hover:grayscale-0 transition duration-500 ease-in-out ${
         loaded ? 'opacity-100' : 'opacity-0'
       }`}
     />
   );
 }
+
 
 function Educacion() {
   useEffect(() => {
@@ -67,6 +71,9 @@ function Educacion() {
     aws, googlecloud, nyif, polimi, ub, uv
   ];
 
+  const [loadedCount, setLoadedCount] = useState(0);
+  const totalLogos = logos.length * 2;
+
   return (
     <section className="max-w-6xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">Formación Académica</h1>
@@ -99,14 +106,21 @@ function Educacion() {
 
       <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Cursos y Certificaciones</h2>
 
+      {loadedCount >= totalLogos && (
       <div className="overflow-x-hidden py-4 px-2 bg-gray-50 rounded-lg shadow-inner mb-6">
         <div className="flex gap-6 animate-scroll-x w-max">
           {[...logos, ...logos].map((logo, i) => (
-            <FadeInImage key={i} src={logo} alt={`Logo ${i}`} />
+            <FadeInImage
+              key={i}
+              src={logo}
+              alt={`Logo ${i}`}
+              onLoad={() => setLoadedCount(prev => prev + 1)}
+            />
           ))}
-
         </div>
       </div>
+    )}
+
 
       <div className="text-center">
         <Link
