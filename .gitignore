@@ -1,0 +1,30 @@
+# Dependencias
+/node_modules/
+
+# Build
+/dist/
+
+# Archivos de entorno (si los tuvieras)
+/.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Cachés y otros
+/.cache/
+/.vite/
+/*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.zip
+*.tmp
+
+# Archivos de despliegue local de gh-pages
+node_modules/.cache/gh-pages/
