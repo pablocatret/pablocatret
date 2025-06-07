@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----------------------------
+   BASE STYLING
+---------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-100 to-white text-gray-800 antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ----------------------------
+   TYPOGRAPHY
+---------------------------- */
+
+h1 {
+  @apply text-4xl md:text-5xl font-bold text-gray-900 leading-tight;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-semibold text-gray-800 leading-snug;
+}
+
+h3 {
+  @apply text-2xl font-medium text-gray-700;
+}
+
+p {
+  @apply text-base md:text-lg text-gray-600 leading-relaxed;
+}
+
+a {
+  @apply text-blue-600 hover:text-blue-800 underline underline-offset-2 transition duration-200;
+}
+
+/* ----------------------------
+   BUTTONS
+---------------------------- */
+
+.btn {
+  @apply inline-block px-6 py-3 rounded-full font-semibold shadow-md transition duration-300 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-outline {
+  @apply border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+}
+
+/* ----------------------------
+   SECTIONS
+---------------------------- */
+
+.section {
+  @apply py-16 px-6 md:px-12 max-w-7xl mx-auto;
+}
+
+/* ----------------------------
+   CARDS
+---------------------------- */
+
+.card {
+  @apply bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition;
+}
+
+.card-title {
+  @apply text-xl font-bold text-gray-900 mb-2;
+}
+
+.card-text {
+  @apply text-gray-600;
+}
+
+/* ----------------------------
+   NAVBAR
+---------------------------- */
+.navbar {
+  @apply bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-gray-700;
+}
+
+.nav-link {
+  @apply text-gray-300 hover:text-white font-semibold px-3 py-2 transition-colors duration-300 relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-white transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* ----------------------------
+   FOOTER
+---------------------------- */
+
+footer {
+  @apply bg-slate-100 text-center text-gray-500 text-sm py-6;
+}
+
+@keyframes scroll-x {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 60s linear infinite;
+}
+
