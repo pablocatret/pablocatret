@@ -7,7 +7,7 @@ function Proyectos() {
       titulo: "GenAI AWS Support Chatbot",
       descripcion: "Asistente conversacional inteligente basado en RAG y GPT-4.1 para responder preguntas técnicas sobre AWS a partir de documentación interna en PDF. Incluye procesamiento semántico con MiniLM, búsqueda con ChromaDB y una interfaz web interactiva con Gradio.",
       tecnologias: ["Python", "GPT-4.1", "ChromaDB", "Gradio", "MiniLM"],
-      categorias: ["NLP", "AI Assistants", "LLMs", "RAG"]
+      categorias: ["NLP", "LLMs", "RAG"]
     },
 
     // Finanzas
