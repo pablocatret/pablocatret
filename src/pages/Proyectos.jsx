@@ -3,7 +3,16 @@ import { motion } from 'framer-motion';
 
 function Proyectos() {
   const proyectos = [
+    {
+      titulo: "GenAI AWS Support Chatbot",
+      descripcion: "Asistente conversacional inteligente basado en RAG y GPT-4.1 para responder preguntas técnicas sobre AWS a partir de documentación interna en PDF. Incluye procesamiento semántico con MiniLM, búsqueda con ChromaDB y una interfaz web interactiva con Gradio.",
+      tecnologias: ["Python", "GPT-4.1", "ChromaDB", "Gradio", "MiniLM"],
+      categorias: ["NLP", "AI Assistants", "LLMs", "RAG"]
+    },
+
     // Finanzas
+
+
     {
       titulo: "Pipeline financiero con Airflow",
       descripcion: "Pipeline completo para series temporales financieras, desarrollado en un entorno dockerizado con Apache Airflow. Incluye la ingesta desde APIs públicas, detección automática de anomalías, transformación y almacenamiento en bases de datos PostgreSQL.",
