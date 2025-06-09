@@ -73,7 +73,7 @@ function Proyectos() {
       titulo: "Scraping y análisis de medios con NLP",
       descripcion: "Web scraping automatizado de medios de comunicación españoles, clasificación temática, análisis de sentimientos y uso de transformers para NLP avanzado.",
       tecnologias: ["BeautifulSoup", "HuggingFace Transformers", "Scikit-learn", "NLP"],
-      categorias: ["Ciencia de Datos y ML"]
+      categorias: ["Ciencia de Datos y ML", "NLP"]
     },
 
     // Medio ambiente y predicción
