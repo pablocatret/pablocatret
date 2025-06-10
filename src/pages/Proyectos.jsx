@@ -4,6 +4,14 @@ import { motion } from 'framer-motion';
 function Proyectos() {
   const proyectos = [
     {
+      "titulo": "Agente IA Personal para Gestión de Tareas, Correo y Calendario vía Telegram",
+      "descripcion": "Agente conversacional basado en GPT-4.1 y LangChain que se emplea a través de un bot de Telegram. Permite gestionar tareas, crear y programar reuniones y eventos, enviar correos electrónicos y realizar búsquedas en documentos.",
+      "tecnologias": ["Python", "LangChain", "Telegram Bot API", "SQLite", "APIs"],
+      "categorias": ["LLMs", "Agentes", "AI Engineering"]
+    },
+
+
+    {
       titulo: "GenAI AWS Support Chatbot",
       descripcion: "Asistente conversacional inteligente basado en RAG y GPT-4.1 para responder preguntas técnicas sobre AWS a partir de documentación interna en PDF. Incluye procesamiento semántico con MiniLM, búsqueda con ChromaDB y una interfaz web interactiva con Gradio.",
       tecnologias: ["Python", "GPT-4.1", "ChromaDB", "Gradio", "MiniLM"],
